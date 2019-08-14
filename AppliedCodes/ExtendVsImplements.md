@@ -4,13 +4,9 @@ __extends: A derived class can extend a base class. You may redefine the behavio
 
 __implements: You are implementing a contract. The class implementing the interface "has a" capability.__
 
-_With java 8 release, interface can have default methods in interface, which provides implementation in interface itself.
+_With java 8 release, interface can have default methods in interface, which provides implementation in interface itself._
 
-_Refer to this question for when to use each of them:
-
-_Interface vs Abstract Class (general OO)
-
-_Example to understand things:
+_Example to understand things:_
 
         public class ExtendsAndImplementsDemo{
         public static void main(String args[]){
@@ -152,7 +148,7 @@ output:
 
 __Important points to understand:__
 
-Dog and Cat are animals and they extended remember() and protectOwner() by sharing name,lifeExpentency from Animal.
-Cat can climb() but Dog does not. Dog can think() but Cat does not. These specific capabilities are added to Cat and Dog by implementing that capability.
-Man is not an animal but he can Think,Learn,Apply,Climb.
-By going through these examples, you can understand that __Unrelated classes can have capabilities through interface but related classes override behaviour through extension of base classes.__
+* Dog and Cat are animals and they extended remember() and protectOwner() by sharing name,lifeExpentency from Animal.
+* Cat can climb() but Dog does not. Dog can think() but Cat does not. These specific capabilities are added to Cat and Dog by            implementing that capability.
+* Man is not an animal but he can Think,Learn,Apply,Climb.
+* By going through these examples, you can understand that __Unrelated classes can have capabilities through interface but related classes override behaviour through extension of base classes.__

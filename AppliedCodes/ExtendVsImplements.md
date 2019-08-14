@@ -1,19 +1,19 @@
-# Generally implements used for implementing an interface and extends used for extension of base class behaviour or abstract class.
+### Generally implements used for implementing an interface and extends used for extension of base class behaviour or abstract class.
 
-## extends: A derived class can extend a base class. You may redefine the behaviour of an established relation. Derived class "is a" base class type
+__extends: A derived class can extend a base class. You may redefine the behaviour of an established relation. Derived class "is a" base class type__
 
-## implements: You are implementing a contract. The class implementing the interface "has a" capability.
+__implements: You are implementing a contract. The class implementing the interface "has a" capability.__
 
-With java 8 release, interface can have default methods in interface, which provides implementation in interface itself.
+_With java 8 release, interface can have default methods in interface, which provides implementation in interface itself.
 
-Refer to this question for when to use each of them:
+_Refer to this question for when to use each of them:
 
-Interface vs Abstract Class (general OO)
+_Interface vs Abstract Class (general OO)
 
-Example to understand things:
+_Example to understand things:
 
-> public class ExtendsAndImplementsDemo{
-    public static void main(String args[]){
+        public class ExtendsAndImplementsDemo{
+        public static void main(String args[]){
 
         Dog dog = new Dog("Tiger",16);
         Cat cat = new Cat("July",20);
@@ -45,9 +45,9 @@ Example to understand things:
         a.apply();
 
     }
-}
+    }
 
-abstract class Animal{
+    abstract class Animal{
     String name;
     int lifeExpentency;
     public Animal(String name,int lifeExpentency ){
@@ -64,8 +64,9 @@ abstract class Animal{
     public String toString(){
         return this.getClass().getSimpleName()+":"+name+":"+lifeExpentency;
     }
-}
-class Dog extends Animal implements Learn{
+    }
+
+    class Dog extends Animal implements Learn{
 
     public Dog(String name,int age){
         super(name,age);
@@ -79,9 +80,9 @@ class Dog extends Animal implements Learn{
     public void learn(){
         System.out.println(this.getClass().getSimpleName()+ " can learn:");
     }
-}
-class Cat extends Animal implements Climb {
-    public Cat(String name,int age){
+    }
+    class Cat extends Animal implements Climb {
+        public Cat(String name,int age){
         super(name,age);
     }
     public void remember(){
@@ -93,22 +94,22 @@ class Cat extends Animal implements Climb {
     public void climb(){
         System.out.println(this.getClass().getSimpleName()+ " can climb");
     }
-}
-interface Climb{
+    }
+    interface Climb{
     public void climb();
-}
-interface Think {
+    }
+    interface Think {
     public void think();
-}
+    }
 
-interface Learn {
+    interface Learn {
     public void learn();
-}
-interface Apply{
+    }
+    interface Apply{
     public void apply();
-}
+    }
 
-class Man implements Think,Learn,Apply,Climb{
+    class Man implements Think,Learn,Apply,Climb{
     String name;
     int age;
 
@@ -135,25 +136,23 @@ class Man implements Think,Learn,Apply,Climb{
 
 output:
 
-> Dog:Dog:Tiger:16
-Cat:Cat:July:20
-Dog can remember for 5 minutes
-Dog will protect owner
-Dog can learn:
-Cat can remember for 16 hours
-Cat won't protect owner
-Cat can climb
-Man :Ravindra:Age:40
-I can climb:Man
-I can think:Man
-I can learn:Man
-I can apply:Man
+    Dog:Dog:Tiger:16
+    Cat:Cat:July:20
+    Dog can remember for 5 minutes
+    Dog will protect owner
+    Dog can learn:
+    Cat can remember for 16 hours
+    Cat won't protect owner
+    Cat can climb
+    Man :Ravindra:Age:40
+    I can climb:Man
+    I can think:Man
+    I can learn:Man
+    I can apply:Man
 
-_Important points to understand:_
+__Important points to understand:__
 
-Dog and Cat are animals and they extended remember() and protectOwner() by sharing name,lifeExpentency from Animal
+Dog and Cat are animals and they extended remember() and protectOwner() by sharing name,lifeExpentency from Animal.
 Cat can climb() but Dog does not. Dog can think() but Cat does not. These specific capabilities are added to Cat and Dog by implementing that capability.
-Man is not an animal but he can Think,Learn,Apply,Climb
-By going through these examples, you can understand that
-
-Unrelated classes can have capabilities through interface but related classes override behaviour through extension of base classes.
+Man is not an animal but he can Think,Learn,Apply,Climb.
+By going through these examples, you can understand that __Unrelated classes can have capabilities through interface but related classes override behaviour through extension of base classes.__
